@@ -1,0 +1,441 @@
+{% extends 'base.html' %}
+
+{% block title %}AN-ANT Ambar | Ankara - Antalya Parça Yük ve Ambar Taşımacılığı{% endblock %}
+
+{% block meta_description %}AN-ANT Ambar ile Ankara - Antalya arası güvenli, hızlı ve uygun fiyatlı parça yük ve ambar taşımacılığı. 24 saatte adrese teslimat, %100 sigortalı taşıma, 7/24 müşteri desteği. Hemen ücretsiz teklif alın.{% endblock %}
+
+{% block meta_keywords %}ankara antalya nakliyat, ambar taşımacılığı, parça yük taşıma, ankara nakliye firması, antalya nakliye, yük taşıma, lojistik firması, ucuz nakliyat{% endblock %}
+
+{% block canonical %}https://www.an-ant.com.tr{% endblock %}
+
+{% block og_title %}AN-ANT Ambar | Ankara - Antalya Parça Yük ve Ambar Taşımacılığı{% endblock %}
+{% block og_description %}Ankara - Antalya hattında 24 saatte adrese teslimat. %100 sigortalı, uygun fiyatlı parça yük ve ambar taşımacılığı. Ücretsiz teklif alın.{% endblock %}
+{% block og_url %}https://www.an-ant.com.tr{% endblock %}
+
+{% block extra_head %}
+<!-- JSON-LD: LocalBusiness / MovingCompany -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "AN-ANT Ambar",
+  "url": "https://www.an-ant.com.tr",
+  "telephone": "+90-312-444-0006",
+  "description": "Ankara - Antalya hattında profesyonel parça yük ve ambar taşımacılığı hizmeti. 24 saat teslimat garantisi, sigortalı taşıma.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ankara",
+    "addressLocality": "Ankara",
+    "addressRegion": "Ankara",
+    "addressCountry": "TR"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Ankara"},
+    {"@type": "City", "name": "Antalya"},
+    {"@type": "City", "name": "İstanbul"},
+    {"@type": "City", "name": "İzmir"}
+  ],
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "₺₺",
+  "sameAs": []
+}
+</script>
+
+<!-- JSON-LD: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ankara - Antalya arası nakliye ne kadar sürer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ortalama 10-12 saatte Antalya'ya ulaşmakta ve 24 saat içerisinde adrese teslimat yapılmaktadır. Yoğun dönemlerde müşterilerimizi önceden bilgilendiriyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ambar fiyatları nasıl belirlenir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fiyatlandırma yükünüzün hacmi (m³), ağırlığı (kg) ve teslimat noktasına olan uzaklığa göre belirlenir. Ücretsiz fiyat teklifi için iletişim formunu doldurabilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Taşınan mallar sigortalı mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet, tüm taşımalarımız nakliyat sigortası kapsamında gerçekleştirilmektedir. Yükünüzün değerine göre ek sigorta imkânı da sunmaktayız."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minimum yük miktarı var mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Parça yük hizmetimizde minimum yük miktarı şartı bulunmamaktadır. Tek bir kutudan tam kamyon yüküne kadar her boyutta yükü taşıyabiliyoruz."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
+{% block content %}
+
+<!-- ── HERO ─────────────────────────────────────────────────────── -->
+<section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-primary-dark to-primary py-12 sm:py-20 lg:py-32">
+  <!-- Arkaplan desen -->
+  <div class="absolute inset-0 opacity-5" style="background-image: url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\");"></div>
+  <div class="absolute top-0 right-0 w-1/2 h-full opacity-10" style="background: radial-gradient(ellipse at 80% 20%, #60a5fa 0%, transparent 70%);"></div>
+
+  <!-- px-5 sm:px-6 lg:px-10: Hero container-max kendi yatay padding'ini taşıyor -->
+  <div class="container-max relative px-5 sm:px-6 lg:px-10">
+    <div class="max-w-3xl" data-aos="fade-up">
+
+      <!-- Güzergah rozeti — mobilde biraz küçük -->
+      <div class="inline-flex items-center gap-2 sm:gap-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white text-xs sm:text-sm font-semibold px-3 sm:px-5 py-2 sm:py-2.5 rounded-full mb-5 sm:mb-8">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0"></span>
+        <span class="font-bold tracking-wide">ANKARA</span>
+        <svg class="w-4 h-4 sm:w-5 sm:h-5 text-white/60 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+        <span class="font-bold tracking-wide">ANTALYA</span>
+        <span class="w-2 h-2 rounded-full bg-orange-400 animate-pulse flex-shrink-0"></span>
+      </div>
+
+      <!-- H1 — mobilde text-3xl, tablet text-4xl, masaüstü text-6xl -->
+      <h1 class="text-3xl sm:text-4xl lg:text-6xl font-black text-white leading-tight mb-4 sm:mb-6">
+        Ambar ve Parça Yük<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">Taşımacılığı</span>
+      </h1>
+
+      <p class="text-base sm:text-lg text-blue-100 mb-7 sm:mb-10 max-w-xl leading-relaxed">
+        Ankara - Antalya hattında <strong class="text-white">24 saatte teslimat</strong>, en uygun fiyat garantisi ve sigortalı taşımacılık hizmeti sunuyoruz.
+      </p>
+
+      <!-- Butonlar — mobilde tam genişlik, sm'de yan yana -->
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+        <a href="{% url 'contact' %}"
+           class="inline-flex items-center justify-center gap-2 bg-white text-primary px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-blue-50 transition-all duration-200 shadow-xl hover:shadow-2xl hover:-translate-y-0.5">
+          Ücretsiz Teklif Al
+          <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="tel:+903124440006"
+           class="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-white/10 hover:border-white/70 transition-all duration-200 backdrop-blur-sm">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Hemen Ara
+        </a>
+      </div>
+    </div>
+
+    <!-- İstatistik kartları — 2x2 mobil, 4'lü masaüstü; daha küçük padding/font -->
+    <div class="mt-10 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4" data-aos="fade-up" data-aos-delay="150">
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 text-center hover:bg-white/15 transition-colors duration-200">
+        <p class="text-2xl sm:text-3xl font-black text-white">24s</p>
+        <p class="text-[10px] sm:text-xs text-blue-200 font-medium mt-1 sm:mt-1.5 uppercase tracking-wider">Teslimat Garantisi</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 text-center hover:bg-white/15 transition-colors duration-200">
+        <p class="text-2xl sm:text-3xl font-black text-white">7/24</p>
+        <p class="text-[10px] sm:text-xs text-blue-200 font-medium mt-1 sm:mt-1.5 uppercase tracking-wider">Müşteri Hizmetleri</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 text-center hover:bg-white/15 transition-colors duration-200">
+        <p class="text-2xl sm:text-3xl font-black text-white">81</p>
+        <p class="text-[10px] sm:text-xs text-blue-200 font-medium mt-1 sm:mt-1.5 uppercase tracking-wider">İl Kapsama Alanı</p>
+      </div>
+      <div class="bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl sm:rounded-2xl p-3.5 sm:p-5 text-center hover:bg-white/15 transition-colors duration-200">
+        <p class="text-2xl sm:text-3xl font-black text-white">%100</p>
+        <p class="text-[10px] sm:text-xs text-blue-200 font-medium mt-1 sm:mt-1.5 uppercase tracking-wider">Sigortalı Taşıma</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HİZMETLER ─────────────────────────────────────────────────── -->
+<section class="section-padding bg-slate-50">
+  <div class="container-max">
+
+    <div class="text-center mb-8 sm:mb-14" data-aos="fade-up">
+      <span class="inline-block text-primary text-xs font-bold uppercase tracking-widest bg-primary/10 px-4 py-1.5 rounded-full mb-3 sm:mb-4">Hizmetlerimiz</span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-3 sm:mb-4">Profesyonel Lojistik Çözümleri</h2>
+      <p class="text-slate-500 text-base sm:text-lg max-w-2xl mx-auto">
+        Ankara - Antalya hattında güvenilir parça yük ve ambar taşımacılığı
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-8">
+
+      {% for service in services %}
+      <div class="group relative bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-slate-100 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 overflow-hidden"
+           data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+
+        <!-- Üst accent çizgi -->
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary to-blue-400 transform -translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-t-2xl"></div>
+
+        <!-- Sıra numarası (arka plan) -->
+        <div class="absolute top-4 right-5 text-7xl sm:text-8xl font-black text-slate-100 leading-none select-none pointer-events-none group-hover:text-primary/10 transition-colors duration-300">
+          {{ forloop.counter }}
+        </div>
+
+        <!-- İkon -->
+        <div class="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary group-hover:text-white transition-all duration-300 group-hover:scale-110">
+          {% include 'partials/service_icon.html' with icon=service.icon css_class="w-6 h-6 sm:w-7 sm:h-7" only %}
+        </div>
+
+        <h3 class="relative text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-300">{{ service.title }}</h3>
+        <p class="relative text-slate-500 text-sm leading-relaxed">{{ service.description }}</p>
+
+      </div>
+      {% empty %}
+      <p class="col-span-3 text-center text-slate-400 py-12">Henüz hizmet eklenmemiş.</p>
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- ── NEDEN BİZ ────────────────────────────────────────────────── -->
+<section class="section-padding relative overflow-hidden" style="background: linear-gradient(135deg, #001f3f 0%, #003366 50%, #004080 100%);">
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: repeating-linear-gradient(45deg, #fff 0, #fff 1px, transparent 0, transparent 50%); background-size: 24px 24px;"></div>
+  <div class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full opacity-10" style="background: radial-gradient(circle, #60a5fa 0%, transparent 70%);"></div>
+
+  <div class="container-max relative">
+    <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+      <span class="inline-block text-blue-300 text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full mb-3 sm:mb-4">Neden Biz</span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4">Neden AN-ANT Ambar?</h2>
+      <p class="text-blue-200 text-base sm:text-lg max-w-2xl mx-auto">
+        Onlarca yıllık tecrübemizle güvenilir lojistik çözümler sunuyoruz
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+
+      <div class="group relative bg-white/8 hover:bg-white/14 border border-white/10 hover:border-white/25 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="0">
+        <div class="absolute top-3 right-4 text-6xl font-black text-white/5 leading-none select-none">01</div>
+        <div class="w-11 h-11 sm:w-12 sm:h-12 bg-white/15 group-hover:bg-white/25 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors duration-300">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2m6-2a10 10 0 1 1-20 0 10 10 0 0 1 20 0z"/>
+          </svg>
+        </div>
+        <h4 class="font-bold text-white mb-1.5 sm:mb-2 text-sm sm:text-base">Hızlı Teslimat</h4>
+        <p class="text-blue-200 text-xs sm:text-sm leading-relaxed">24 saat içinde adrese teslim garantisi</p>
+      </div>
+
+      <div class="group relative bg-white/8 hover:bg-white/14 border border-white/10 hover:border-white/25 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+        <div class="absolute top-3 right-4 text-6xl font-black text-white/5 leading-none select-none">02</div>
+        <div class="w-11 h-11 sm:w-12 sm:h-12 bg-white/15 group-hover:bg-white/25 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors duration-300">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+          </svg>
+        </div>
+        <h4 class="font-bold text-white mb-1.5 sm:mb-2 text-sm sm:text-base">Sigortalı Taşıma</h4>
+        <p class="text-blue-200 text-xs sm:text-sm leading-relaxed">Tüm yükler nakliyat sigortası kapsamında</p>
+      </div>
+
+      <div class="group relative bg-white/8 hover:bg-white/14 border border-white/10 hover:border-white/25 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+        <div class="absolute top-3 right-4 text-6xl font-black text-white/5 leading-none select-none">03</div>
+        <div class="w-11 h-11 sm:w-12 sm:h-12 bg-white/15 group-hover:bg-white/25 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors duration-300">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75"/>
+          </svg>
+        </div>
+        <h4 class="font-bold text-white mb-1.5 sm:mb-2 text-sm sm:text-base">Uygun Fiyat</h4>
+        <p class="text-blue-200 text-xs sm:text-sm leading-relaxed">En rekabetçi fiyatlarla kaliteli hizmet</p>
+      </div>
+
+      <div class="group relative bg-white/8 hover:bg-white/14 border border-white/10 hover:border-white/25 rounded-2xl p-5 sm:p-6 text-center transition-all duration-300 overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+        <div class="absolute top-3 right-4 text-6xl font-black text-white/5 leading-none select-none">04</div>
+        <div class="w-11 h-11 sm:w-12 sm:h-12 bg-white/15 group-hover:bg-white/25 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-colors duration-300">
+          <svg class="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"/>
+          </svg>
+        </div>
+        <h4 class="font-bold text-white mb-1.5 sm:mb-2 text-sm sm:text-base">Canlı Takip</h4>
+        <p class="text-blue-200 text-xs sm:text-sm leading-relaxed">Yükünüzü anlık olarak takip edin</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SSS ───────────────────────────────────────────────────────── -->
+<section class="section-padding bg-white">
+  <div class="container-max">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-8 sm:mb-12" data-aos="fade-up">
+        <span class="inline-block text-primary text-xs font-bold uppercase tracking-widest bg-primary/10 px-4 py-1.5 rounded-full mb-3 sm:mb-4">SSS</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-3 sm:mb-4">Sıkça Sorulan Sorular</h2>
+        <p class="text-slate-500 text-base sm:text-lg">Merak ettiklerinize hızlıca cevap bulun</p>
+      </div>
+
+      <div x-data="{ openItem: null }" class="space-y-2 sm:space-y-3" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Soru 1 -->
+        <div class="group rounded-xl border border-slate-200 hover:border-primary/30 overflow-hidden transition-colors duration-200">
+          <button @click="openItem = openItem === 1 ? null : 1"
+                  class="flex justify-between items-center w-full px-4 sm:px-6 py-4 sm:py-5 text-left bg-white hover:bg-slate-50 transition-colors duration-200">
+            <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-primary/10 text-primary text-xs font-black flex items-center justify-center">S1</span>
+              <span class="font-semibold text-slate-800 group-hover:text-primary transition-colors duration-200 text-sm sm:text-base">Ankara - Antalya arası nakliye ne kadar sürer?</span>
+            </div>
+            <svg :class="{ 'rotate-180': openItem === 1 }"
+                 class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 flex-shrink-0 ml-2 sm:ml-4"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div x-show="openItem === 1" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak
+               class="px-4 sm:px-6 pb-4 sm:pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-3 sm:pt-4 bg-slate-50/50">
+            Ortalama 10-12 saatte Antalya'ya ulaşmakta ve <strong class="text-slate-700">24 saat içerisinde adrese teslimat</strong> yapılmaktadır. Yoğun dönemlerde bu süre biraz uzayabilir, ancak müşterilerimizi önceden bilgilendiriyoruz.
+          </div>
+        </div>
+
+        <!-- Soru 2 -->
+        <div class="group rounded-xl border border-slate-200 hover:border-primary/30 overflow-hidden transition-colors duration-200">
+          <button @click="openItem = openItem === 2 ? null : 2"
+                  class="flex justify-between items-center w-full px-4 sm:px-6 py-4 sm:py-5 text-left bg-white hover:bg-slate-50 transition-colors duration-200">
+            <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-primary/10 text-primary text-xs font-black flex items-center justify-center">S2</span>
+              <span class="font-semibold text-slate-800 group-hover:text-primary transition-colors duration-200 text-sm sm:text-base">Ambar fiyatları nasıl belirlenir?</span>
+            </div>
+            <svg :class="{ 'rotate-180': openItem === 2 }"
+                 class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 flex-shrink-0 ml-2 sm:ml-4"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div x-show="openItem === 2" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak
+               class="px-4 sm:px-6 pb-4 sm:pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-3 sm:pt-4 bg-slate-50/50">
+            Fiyatlandırma yükünüzün <strong class="text-slate-700">hacmi (m³), ağırlığı (kg)</strong> ve teslimat noktasına olan uzaklığa göre belirlenir. Ücretsiz fiyat teklifi almak için bize ulaşabilir veya iletişim formunu doldurabilirsiniz.
+          </div>
+        </div>
+
+        <!-- Soru 3 -->
+        <div class="group rounded-xl border border-slate-200 hover:border-primary/30 overflow-hidden transition-colors duration-200">
+          <button @click="openItem = openItem === 3 ? null : 3"
+                  class="flex justify-between items-center w-full px-4 sm:px-6 py-4 sm:py-5 text-left bg-white hover:bg-slate-50 transition-colors duration-200">
+            <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-primary/10 text-primary text-xs font-black flex items-center justify-center">S3</span>
+              <span class="font-semibold text-slate-800 group-hover:text-primary transition-colors duration-200 text-sm sm:text-base">Taşınan mallar sigortalı mı?</span>
+            </div>
+            <svg :class="{ 'rotate-180': openItem === 3 }"
+                 class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 flex-shrink-0 ml-2 sm:ml-4"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div x-show="openItem === 3" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak
+               class="px-4 sm:px-6 pb-4 sm:pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-3 sm:pt-4 bg-slate-50/50">
+            Evet, <strong class="text-slate-700">tüm taşımalarımız nakliyat sigortası kapsamında</strong> gerçekleştirilmektedir. Yükünüzün değerine göre ek sigorta imkânı da sunmaktayız. Ayrıntılı bilgi için müşteri temsilcilerimizle iletişime geçebilirsiniz.
+          </div>
+        </div>
+
+        <!-- Soru 4 -->
+        <div class="group rounded-xl border border-slate-200 hover:border-primary/30 overflow-hidden transition-colors duration-200">
+          <button @click="openItem = openItem === 4 ? null : 4"
+                  class="flex justify-between items-center w-full px-4 sm:px-6 py-4 sm:py-5 text-left bg-white hover:bg-slate-50 transition-colors duration-200">
+            <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+              <span class="flex-shrink-0 w-7 h-7 rounded-lg bg-primary/10 text-primary text-xs font-black flex items-center justify-center">S4</span>
+              <span class="font-semibold text-slate-800 group-hover:text-primary transition-colors duration-200 text-sm sm:text-base">Minimum yük miktarı var mı?</span>
+            </div>
+            <svg :class="{ 'rotate-180': openItem === 4 }"
+                 class="w-4 h-4 sm:w-5 sm:h-5 text-slate-400 transition-transform duration-200 flex-shrink-0 ml-2 sm:ml-4"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div x-show="openItem === 4" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 -translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" x-cloak
+               class="px-4 sm:px-6 pb-4 sm:pb-5 text-slate-500 text-sm leading-relaxed border-t border-slate-100 pt-3 sm:pt-4 bg-slate-50/50">
+            Parça yük hizmetimizde <strong class="text-slate-700">minimum yük miktarı şartı bulunmamaktadır</strong>. Tek bir kutudan tam kamyon yüküne kadar her boyutta yükü taşıyabiliyoruz.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────────────────── -->
+<section class="relative py-12 sm:py-16 lg:py-28 overflow-hidden bg-slate-900">
+  <div class="absolute inset-0 opacity-20" style="background: radial-gradient(ellipse at 30% 50%, #003366 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, #1e3a5f 0%, transparent 60%);"></div>
+
+  <!-- CTA container da kendi yatay padding'ini taşıyor -->
+  <div class="container-max relative px-5 sm:px-6 lg:px-10">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-10">
+
+        <div class="text-center lg:text-left">
+          <span class="inline-block text-blue-300 text-xs font-bold uppercase tracking-widest bg-white/10 px-4 py-1.5 rounded-full mb-3 sm:mb-4">Hemen Başlayın</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-3 sm:mb-4 leading-tight">
+            Ücretsiz Fiyat Teklifi Alın
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg max-w-md mx-auto lg:mx-0">
+            Formu doldurun, <strong class="text-white">30 dakika içinde</strong> sizi arayalım. Ankara - Antalya taşımacılığında en iyi fiyatı garantiliyoruz.
+          </p>
+        </div>
+
+        <!-- Butonlar — mobilde tam genişlik yan yana, lg'de dikey -->
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 sm:gap-4 w-full sm:w-auto flex-shrink-0">
+          <a href="{% url 'contact' %}"
+             class="inline-flex items-center justify-center gap-2 bg-white text-slate-900 px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-blue-50 transition-all duration-200 shadow-xl hover:-translate-y-0.5">
+            İletişim Formu
+            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="tel:+903124440006"
+             class="inline-flex items-center justify-center gap-2 border-2 border-white/30 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-white/10 hover:border-white/60 transition-all duration-200">
+            <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            +90 312 444 0006
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Alt güven çizgisi -->
+      <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-white/10 flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-slate-500">
+        <span class="flex items-center gap-1.5 sm:gap-2">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/>
+          </svg>
+          Ücretsiz teklif
+        </span>
+        <span class="flex items-center gap-1.5 sm:gap-2">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/>
+          </svg>
+          Sigortalı taşıma
+        </span>
+        <span class="flex items-center gap-1.5 sm:gap-2">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/>
+          </svg>
+          24 saat teslimat
+        </span>
+        <span class="flex items-center gap-1.5 sm:gap-2">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/>
+          </svg>
+          7/24 destek
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}

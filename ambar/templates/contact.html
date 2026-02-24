@@ -1,0 +1,211 @@
+{% extends 'base.html' %}
+
+{% block title %}İletişim | AN-ANT Ambar{% endblock %}
+
+{% block content %}
+
+<!-- Breadcrumb -->
+<div class="bg-white border-b border-slate-100">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-40 py-4">
+    <nav class="flex items-center gap-2 text-sm text-slate-500">
+      <a href="{% url 'home' %}" class="hover:text-primary transition-colors duration-200">Ana Sayfa</a>
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m9 18 6-6-6-6"/>
+      </svg>
+      <span class="text-slate-900 font-medium">İletişim</span>
+    </nav>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="section-padding pb-10 lg:pb-12">
+  <div class="container-max">
+    <div data-aos="fade-up">
+      <h1 class="text-4xl sm:text-5xl font-black text-slate-900 mb-4">İletişim</h1>
+      <p class="text-slate-500 text-lg max-w-xl leading-relaxed">
+        Lojistik ihtiyaçlarınız için uzman ekibimizle 7/24 iletişime geçebilirsiniz.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Ana İçerik -->
+<section class="px-6 lg:px-40 pb-20 lg:pb-28">
+  <div class="container-max">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+
+      <!-- Form (sol kolon) -->
+      <div class="lg:col-span-7" data-aos="fade-up">
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-8 lg:p-10">
+          <h2 class="text-2xl font-bold text-slate-900 mb-8">Mesaj Gönder</h2>
+
+          <form method="post" novalidate class="space-y-6">
+            {% csrf_token %}
+
+            <!-- Ad Soyad -->
+            <div>
+              <label for="{{ form.ad_soyad.id_for_label }}"
+                     class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                Ad Soyad
+              </label>
+              <input type="text"
+                     name="{{ form.ad_soyad.html_name }}"
+                     id="{{ form.ad_soyad.id_for_label }}"
+                     value="{{ form.ad_soyad.value|default:'' }}"
+                     placeholder="Adınız ve soyadınız"
+                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white {% if form.ad_soyad.errors %}border-red-400 bg-red-50{% endif %}">
+              {% if form.ad_soyad.errors %}
+              <p class="mt-1.5 text-xs text-red-500 flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9 3.75h.008v.008H12v-.008z"/>
+                </svg>
+                {{ form.ad_soyad.errors|first }}
+              </p>
+              {% endif %}
+            </div>
+
+            <!-- E-posta -->
+            <div>
+              <label for="{{ form.email.id_for_label }}"
+                     class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                E-posta
+              </label>
+              <input type="email"
+                     name="{{ form.email.html_name }}"
+                     id="{{ form.email.id_for_label }}"
+                     value="{{ form.email.value|default:'' }}"
+                     placeholder="ornek@mail.com"
+                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white {% if form.email.errors %}border-red-400 bg-red-50{% endif %}">
+              {% if form.email.errors %}
+              <p class="mt-1.5 text-xs text-red-500 flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9 3.75h.008v.008H12v-.008z"/>
+                </svg>
+                {{ form.email.errors|first }}
+              </p>
+              {% endif %}
+            </div>
+
+            <!-- Mesaj -->
+            <div>
+              <label for="{{ form.mesaj.id_for_label }}"
+                     class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">
+                Mesaj
+              </label>
+              <textarea name="{{ form.mesaj.html_name }}"
+                        id="{{ form.mesaj.id_for_label }}"
+                        rows="5"
+                        placeholder="Mesajınızı buraya yazın..."
+                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm placeholder-slate-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent focus:bg-white resize-none {% if form.mesaj.errors %}border-red-400 bg-red-50{% endif %}">{{ form.mesaj.value|default:'' }}</textarea>
+              {% if form.mesaj.errors %}
+              <p class="mt-1.5 text-xs text-red-500 flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0zm-9 3.75h.008v.008H12v-.008z"/>
+                </svg>
+                {{ form.mesaj.errors|first }}
+              </p>
+              {% endif %}
+            </div>
+
+            <button type="submit"
+                    class="w-full flex items-center justify-center gap-2 bg-primary text-white px-6 py-4 rounded-xl font-bold text-sm hover:bg-primary-light transition-colors duration-200 shadow-md hover:shadow-lg">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m22 2-7 20-4-9-9-4Z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 2 11 13"/>
+              </svg>
+              Mesajı Gönder
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Şube bilgileri (sağ kolon) -->
+      <div class="lg:col-span-5 space-y-6" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Ankara Şubesi -->
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-slate-900">Ankara Şubesi</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Lojistik Üssü, Kahramankazan, Ankara</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+903124440006" class="hover:text-primary transition-colors">+90 (312) 444 00 06</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Antalya Şubesi -->
+        <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 bg-primary/10 text-primary rounded-xl flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-slate-900">Antalya Şubesi</h3>
+          </div>
+          <ul class="space-y-3 text-sm text-slate-600">
+            <li class="flex items-start gap-3">
+              <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              <span>Organize Sanayi Bölgesi, Döşemealtı, Antalya</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg class="w-4 h-4 flex-shrink-0 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              <a href="tel:+902424440007" class="hover:text-primary transition-colors">+90 (242) 444 00 07</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Çalışma Saatleri -->
+        <div class="bg-primary rounded-2xl p-7 text-white">
+          <div class="flex items-center gap-3 mb-5">
+            <svg class="w-5 h-5 text-blue-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <h3 class="font-bold">Çalışma Saatleri</h3>
+          </div>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-between items-center border-b border-white/10 pb-3">
+              <span class="text-blue-200">Pazartesi - Cuma</span>
+              <span class="font-semibold">08:30 – 18:30</span>
+            </li>
+            <li class="flex justify-between items-center border-b border-white/10 pb-3">
+              <span class="text-blue-200">Cumartesi</span>
+              <span class="font-semibold">09:00 – 14:00</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span class="text-blue-200">Pazar</span>
+              <span class="font-semibold text-blue-300">Kapalı</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

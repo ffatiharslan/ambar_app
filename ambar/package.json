@@ -1,0 +1,11 @@
+{
+  "name": "ambar-tailwind",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i ambarapp/static/css/input.css -o ambarapp/static/css/output.css --minify",
+    "watch:css": "tailwindcss -i ambarapp/static/css/input.css -o ambarapp/static/css/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

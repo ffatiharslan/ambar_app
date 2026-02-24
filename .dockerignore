@@ -1,0 +1,27 @@
+# Sanal ortam ve Node modülleri
+.venv/
+ambar/node_modules/
+
+# Veritabanı (container içinde yeniden oluşturulur)
+ambar/db.sqlite3
+
+# Python cache
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Ortam değişkenleri (gizli bilgi içerir)
+.env
+
+# Geliştirme araçları
+.DS_Store
+*.log
