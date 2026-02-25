@@ -56,7 +56,7 @@ rm -rf "./certbot/conf/live/$DOMAIN" \
        "./certbot/conf/archive/$DOMAIN" \
        "./certbot/conf/renewal/$DOMAIN.conf"
 
-docker compose run --rm certbot certonly \
+docker compose run --rm --entrypoint certbot certbot certonly \
   --webroot \
   --webroot-path=/var/www/certbot \
   --email "$CERTBOT_EMAIL" \
