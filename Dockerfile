@@ -49,14 +49,12 @@ COPY ambar/ .
 COPY --from=css-builder /build/ambarapp/static/css/output.css \
      ambarapp/static/css/output.css
 
-# Statik dosyaları topla
-RUN python manage.py collectstatic --noinput
-
 EXPOSE 8000
 
-# migrate + gunicorn ile başlat
+# collectstatic → migrate → gunicorn
 CMD ["sh", "-c", \
-     "python manage.py migrate --noinput && \
+     "python manage.py collectstatic --noinput && \
+      python manage.py migrate --noinput && \
       gunicorn ambar.wsgi:application \
         --bind 0.0.0.0:8000 \
         --workers 3 \
