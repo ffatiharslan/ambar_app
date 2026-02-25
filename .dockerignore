@@ -22,6 +22,9 @@ docker-compose.yml
 # Ortam değişkenleri (gizli bilgi içerir)
 .env
 
+# Let's Encrypt sertifikaları (özel anahtar içerir, image'a girmemeli)
+certbot/
+
 # Geliştirme araçları
 .DS_Store
 *.log
